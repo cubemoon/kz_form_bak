@@ -1,0 +1,114 @@
+.f-p-wrap{
+	.f-form-view{
+		background:#fff;
+		padding:0;
+		border:$borderGrey 1px solid;
+		width:370px;
+	}
+	.f-form-view .f-title{
+		text-align: center;
+		padding:10px 15px;
+		background:$moldBg;
+	}
+	.f-form-view .f-title h1{
+		font-size: 16px;
+		font-weight: bold;
+		padding:5px 0;
+	}
+	.f-form-item{
+		border: #fff 2px solid;
+		padding:5px 15px;
+		position: relative;
+	}
+	.f-form-item h2{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.f-form-item:hover{
+		border: $borderBlue 2px solid;
+		background: #e8f4fb;
+	}
+	.f-form-item .f-item-del{
+		display: none;
+	}
+	.f-form-item:hover .f-item-del{
+		display: block;
+		position: absolute;
+		right:10px;
+		top: 5px;
+		color: $textBlue;
+		opacity: 0.7;
+		width: 18px;
+		height: 18px;
+		overflow: hidden;
+		text-align: center;
+		z-index: 11;
+		font-size: 24px;
+		line-height: 18px;
+		cursor: pointer;
+	}
+	.f-form-item .f-item-mask{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:20px;
+		z-index: 10;
+		cursor: move;
+	}
+	.f-form-item:hover .f-item-del:hover{
+		opacity:1;
+	}
+	.f-form-item .f-item-wrap{
+		padding: 10px 0 5px 0;
+	}
+	.f-form-item .f-item-wrap .f-option-list{
+		width: 100%;
+		box-sizing: border-box;
+		border:$borderBlue 1px solid;
+		border-radius: 4px;
+		background: #fff;
+		overflow: hidden;
+	}
+	.f-form-item .f-control{
+		margin: 0 0 3px 0;
+	}
+	.f-form-item .f-control label{
+		@include display-flex;
+		@include align-items(center);
+	}
+	.f-form-item .f-control label .f-img, .f-form-item .f-control label .f-img img{
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+	}
+	.f-form-item .f-control label .f-img{
+		border:$borderBlue 1px solid;
+		padding:1px;
+		margin-right: 5px;
+	}
+	.f-form-item .f-control label .f-img img{
+		display: block;
+	}
+	.f-form-item .f-control input[type='radio'], .f-form-item .f-control input[type='checkbox']{
+		margin: 0 5px 0 0;
+	}
+	.f-form-item .f-control input[type='text'], .f-form-item .f-control input[type=tel], .f-form-item .f-control input[type=date], .f-form-item .f-control input[type=email], .f-form-item .f-control textarea{
+		width: 100%;
+		box-sizing: border-box;
+		font-size:14px;
+	}
+	.f-form-item .f-control input[type='text'], .f-form-item .f-control input[type=tel], .f-form-item .f-control input[type=date], .f-form-item .f-control input[type=email],{
+		height: 30px;
+	}
+	.f-form-placeholder{
+		border:$borderBlue 1px dashed;
+		padding:20px;
+	}
+	.f-line{
+		border:none;
+		border-top: $textGrey 1px dashed;
+		height: 0px;
+		background: #fff;
+	}
+}

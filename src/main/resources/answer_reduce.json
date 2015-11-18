@@ -1,0 +1,33 @@
+function(id, values) {
+    var result = {};
+    var first = values[0];
+    if (first.name == "id_text" || first.name == "id_textarea") {
+        result = {"no":first.no,"id":first.id, "name": first.name,"title": first.title,
+        	"required":first.required, "count": 0};
+        for (var i = 0, len = values.length; i < len; i++) {
+            result.count = result.count + values[i].count;
+        }
+    } else if(first.name == "id_image"){
+        result = {"no":first.no,"id":first.id, "name": first.name,"title": first.title,
+            "required":first.required, "img": first.img};
+    } else if (first.name == "id_dropdown" || first.name == "id_radio" || first.name == "id_checkbox"
+        || first.name == "id_image_radio" || first.name == "id_image_checkbox") {
+        result = {"no":first.no, "id":first.id,  "name": first.name,"title": first.title, 
+        	"required":first.required, "value": {}, "value_name" : first.value_name};
+        	
+        if(first.name == "id_image_radio" || first.name == "id_image_checkbox"){
+        	result.value_img = first.value_img;
+        }
+        
+        for (key in first.value) {
+            result.value[key] = 0;
+        }
+
+        for (var i = 0, len = values.length; i < len; i++) {
+            for (key in values[i].value) {
+                result.value[key] = result.value[key] + values[i].value[key];
+            }
+        }
+    }
+    return result;
+}

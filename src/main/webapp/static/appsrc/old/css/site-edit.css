@@ -1,0 +1,142 @@
+html{ background:#f5f5f5;min-width: 1300px;}
+
+.side-bg{position:fixed; left:0; top:0; height:100%; width:202px; border-right:1px solid #ccc; background-color:#eee;}
+
+.main{ 
+    margin-left: 253px;
+}
+.main a{
+    color:#069; text-decoration:underline;
+}
+
+.domain-setting{
+    padding-top: 15px;
+}
+.domain-setting form fieldset{
+    padding: 0;
+    margin: 0;
+}
+.domain-setting form .tip{
+    margin-left: 0;
+}
+.domain-setting form label{
+    font-weight: normal;
+}
+
+input.txt1{width:260px; margin-right:20px;}
+.p1{padding:30px 0 20px;}
+.p2{padding:0 0 10px 20px;}
+.tip{vertical-align:top; line-height:30px; height: 30px; padding-left:20px;display: block;}
+.tip-error{background: url(../img/tip-error.png) no-repeat 0 50%; color:#666;}
+.tip-light{background: url(../img/tip-light.png) no-repeat 0 6px; color:#666;}
+.tip-right{background: url(../img/tip-right.png) no-repeat 0 8px; color:#666;}
+
+.pl-1{padding-left:80px; margin-left:10px;}
+.pl-1 .th{float:left; margin-left:-80px; line-height:30px;}
+.pt{padding-top:40px; padding-bottom:10px; height: 50px}
+input.txt2{width:290px;}
+.gj2 .tip-error{margin-left:0}
+.label{padding-top:6px;}
+.label input{margin-right:10px;}
+.label .ipt2{margin-left:70px;}
+.pt2{margin-top:0px;}
+.bgarea{width:208px; padding:28px 45px; background:#ededed; border:1px solid #dbdbdb; margin-top:15px;}
+.logoico{display:inline-block; width:80px; height:80px; border-radius:8px; color:#fff; text-align:center; font:normal 34px/57px "\5B8B\4F53";vertical-align:top;background-color: #ededed;border: 1px solid #b5b5b5;}
+.bgarea .label{vertical-align:top; line-height:30px; margin:0 10px 0 20px;}
+.bgarea .btn1{width:50px;}
+.bgarea .btn2{width:80px;}
+.bgarea .sc{display:inline-block; padding-left:15px;}
+.bgarea .sc p{color:#666; padding-top:6px;}
+.gj2 .p4{padding-left:23px; line-height:20px;}
+.cf1{width:140px; height:40px; line-height:40px; font-size:16px; border-radius:3px; margin-top:40px; margin-bottom: 15px}
+.bg2{width:246px; padding:28px 26px;}
+
+.gj3 .desc{padding-left:115px; margin:60px 0 0 30px;}
+.gj3 .logoico{float:left; margin-left:-115px; overflow: hidden}
+.gj3 .desc h3{font-size:16px;}
+.gj3 .desc p{line-height:24px; padding-top:10px;}
+.form-desc p{
+    margin-top: 2px;
+}
+
+.gj4{padding:66px 0;margin-left: 239px}
+.gj4 .wp{padding:20px 0 20px;}
+.gj4 .txtar{width:535px; height:80px; line-height:20px; padding:6px; -moz-box-sizing: border-box; box-sizing:border-box;}
+.gj4 .txtar:hover,.gj4 .txtar:focus{box-shadow:inset 1px 1px 3px 0px #ddd; border-color:#97bad0; outline:none;}
+.gj4 .txt2{width:525px;}
+.bg-gray{background: gray;}
+.bg-gray:hover{background: gray}
+
+.copy-code{
+    position: relative;
+    width: 526px;
+}
+.copy-code textarea{
+    resize: none;
+    width: 500px;
+    height: 80px;
+    padding: 4em 1em 2em;
+    background-color: white;
+    overflow: hidden;
+}
+
+.copy-code .tip-title{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 10px;
+    font-size: 12px;
+}
+.copy-code .copy-link{
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.flow-logo{
+
+}
+
+.splash-list{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+.splash-list a{
+    text-decoration: none;
+    position: relative;
+    width: 60px;
+    display: inline-block;
+}
+
+.splash-list a img{
+    margin-right: 2px;
+    border: 3px solid transparent;
+}
+
+.splash-list a.cur img{
+    border: 3px solid #f9c86a;
+}
+
+.splash-list a.click img{
+    border: 3px solid #f9c86a;
+}
+
+.splash-list a.click .ico{
+    position: absolute;
+    right: 4px;
+    bottom: 0px;
+    width: 22px;
+    height: 22px;
+    background: url("../img/type-selected.png") no-repeat;
+}
+
+.splash-use-none .splash-list{
+    display: block;
+}
+
+.splash-use-none .splash-unique{
+    display: none;
+}

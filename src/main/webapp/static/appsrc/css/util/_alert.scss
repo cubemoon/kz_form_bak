@@ -1,0 +1,39 @@
+.f-alert-body{
+	padding:20px;
+	text-align:center;
+	z-index:1;
+	background:#fff;
+}
+.f-alert-footer{
+	background: #f9f9f9;
+	text-align: center;
+	padding:10px;
+	z-index: 2;
+}
+.f-alert-footer a{
+	margin:0 10px;
+}
+.f-alert{
+	position: absolute;
+	z-index: 1202;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+.f-del-alert{
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+}
+.f-mask{
+	background: #000;
+	opacity: 0.1;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: -1;
+}
+.f-alert-footer .f-btn{
+
+}

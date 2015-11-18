@@ -1,0 +1,30 @@
+{{?it.totalCount > 0}}
+<table>
+{{~it.dataList:list}}
+    <tr data-action="show-answer" data-id="{{=list.id}}">
+        <td class="f-doc-td">{{?list.unread}}<i class="f-doc"></i>{{?}}</td>
+        <td class="f-num-td">{{=list.no}}</td>
+        <td class="f-date">{{=list.date}}</td>
+        <td class="f-star">{{?list.star}}<i class="iconfont">&#xe610;</i>{{?}}</td>
+        <td class="f-selected">{{?list.done}}<i class="iconfont">&#xe612;</i>{{?}}</td>
+    </tr>
+{{~}}
+</table>
+{{??it.range}}
+<div class="f-model-list-empty">
+    <div class="f-model-list-empty-wrap">
+        <div class="f-model-list-empty-inner">
+            <i class="iconfont">&#xe617;</i>
+        </div>
+    </div>
+    <p>此表单暂时还没有用户提交反馈结果。</p>
+</div>
+<div class="f-mofel-list-tips">
+	<span>Tips</span>
+	点击右上方 <em>分享表单</em> 一键分享此表单至其他平台，用户点击链接即可填写并提交哦！
+</div>
+{{??}}
+<div class="f-model-list-empty">
+    <p class="f-model-list-empty-select">没有记录</p>
+</div>
+{{?}}

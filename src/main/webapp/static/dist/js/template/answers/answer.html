@@ -1,0 +1,189 @@
+<div class="f-show-con f-scroll" data-id="{{=it.id}}" data-star="{{=it.star}}" data-done="{{=it.done}}">
+{{?it.showTitle}}<h3>{{!it.title}}</h3>{{??}}<h3>反馈结果</h3>{{?}}
+{{~it.fields:list}}
+{{?list.name == 'id_checkbox'}}
+        <section class="f-form-item">
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                {{~list.value:item}}
+                <div class="f-control">
+                    <label>
+                        {{?item.selected}}
+                        <input type="checkbox" checked="checked" />
+                        {{??}}
+                        <input type="checkbox" />
+                        {{?}}
+                        <span>{{!item.name}}</span>
+                    </label>
+                </div>
+                {{~}}
+            </div>
+            <div class="f-item-mask"></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_image_checkbox'}}
+        <section class="f-form-item" >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                {{~list.value:item}}
+                <div class="f-control" >
+                    <label>
+                        {{?item.selected}}
+                        <input type="checkbox" checked="checked" />
+                        {{??}}
+                        <input type="checkbox" />
+                        {{?}}
+                        {{?item.img}}
+                        <em class="f-img"><img src="{{=item.img}}"></em>
+                        {{?}}
+                        <span>{{!item.name}}</span>
+                    </label>
+                </div>
+                {{~}}
+            </div>
+            <div class="f-item-mask" ></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_radio'}}
+        <section class="f-form-item" >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                {{~list.value:item}}
+                <div class="f-control">
+                    <label>
+                        {{?item.selected}}
+                        <input type="radio" checked="checked" />
+                        {{??}}
+                        <input type="radio" />
+                        {{?}}
+                        <span>{{!item.name}}</span>
+                    </label>
+                </div>
+                {{~}}
+            </div>
+            <div class="f-item-mask" ></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_image_radio'}}
+        <section class="f-form-item"  >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                {{~list.value:item}}
+                <div class="f-control" >
+                    <label>
+                        {{?item.selected}}
+                        <input type="radio" checked="checked" />
+                        {{??}}
+                        <input type="radio" />
+                        {{?}}
+                        {{?item.img}}
+                        <em class="f-img"><img src="{{=item.img}}"></em>
+                        {{?}}
+                        <span>{{!item.name}}</span>
+                    </label>
+                </div>
+                {{~}}
+            </div>
+            <div class="f-item-mask" ></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_section'}}
+        <section class="f-form-item">
+            <h2><em>{{!list.title}}</em></h2>
+            <div class="f-item-wrap">
+                <div class="f-control">
+                    <hr class="f-line" />
+                </div>
+            </div>
+            <div class="f-item-mask" ></div>
+        </section>
+    {{?}} 
+    {{?list.name == 'id_text'}}
+        <section class="f-form-item">
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                <div class="f-control">
+                {{?list.value}}
+                <div class="f-input-div">{{!list.value}}</div>
+                {{??}}
+                <input type="text"  data-name="text" value="" />
+                {{?}}
+                </div>
+            </div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_textarea'}}
+        <section class="f-form-item" >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                <div class="f-control">
+                {{?list.value}}
+                    <textarea  data-name="text">{{!list.value}}</textarea>
+                {{??}}
+                <textarea  data-name="text"></textarea>
+                {{?}}
+                </div>
+            </div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_dropdown'}}
+        <section class="f-form-item"  >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                <div class="f-control">
+                    <div class="f-select">
+                        <em>请选择</em>
+                        <i class="iconfont">&#xe601;</i>
+                    </div>
+                     <ul class="f-option-list" style="display: block" data-type="select">
+                            {{~list.value:item}}
+                            <li class="option {{?item.selected}}curr{{?}}">{{!item.name}}</li>
+                            {{~}}
+                    </ul>
+                </div>
+            </div>
+            <div class="f-item-mask"></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_image'}}
+        <section class="f-form-item"  >
+            <h2><em>{{!list.title}}</em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+            <div class="f-item-wrap">
+                <div class="f-description"><span>{{!list.description}}</span></div>
+                <div class="f-control">
+                    <span class="f-span">选择图片</span>
+                    <input type="file" class="file-image" data-name="fileImage" data-action="add-image" size="28" />
+                    <div class="image-style">
+                        <a href="javascript:void(0);">
+                            {{?list.img}}
+                            <img class="f-img" src="{{=list.img}}" />
+                            {{?}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="f-item-mask"></div>
+        </section>
+    {{?}}
+    {{?list.name == 'id_picture'}}
+        <section class="f-form-item" >
+            <div class="f-item-wrap">
+                <div class="f-control">
+                    <a href="{{=list.url}}">
+                        {{?list.img}}
+                        <img class="f-image" src="{{=list.img}}" />
+                        {{?}}
+                    </a>
+                </div>
+                <div class="f-descriptions"><span>{{!list.descriptions}}</span></div>
+            </div>
+            <div class="f-item-mask"></div>
+        </section>
+    {{?}}
+{{~}}
+</div>
+<div class="f-btn-wrap">
+    <a href="javascript:void(0);" class="f-btn" data-action="getstar"><i class="iconfont">&#xe610;</i><span>{{?it.star}}取消星标{{??}}星标{{?}}</span></a>
+    <a href="javascript:void(0);"  class="f-btn" data-action="done"><i class="iconfont">&#xe612;</i><span>{{?it.done}}取消处理{{??}}处理{{?}}</span></a>
+    <a href="javascript:void(0);"  class="f-btn" data-action="delete"><i class="iconfont">&#xe611;</i><span>删除</span></a>
+</div>

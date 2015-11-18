@@ -1,0 +1,42 @@
+<assembly>
+  <formats>
+    <format>tar.gz</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <includes>
+        <include>README*</include>
+        <include>LICENSE*</include>
+        <include>NOTICE*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>src/main/webapp</directory>
+      <outputDirectory>webapp</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>shell</directory>
+      <outputDirectory>shell</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory>classes</outputDirectory>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>lib</outputDirectory>
+      <scope>runtime</scope>
+    </dependencySet>
+
+    <!-- for Sohu Cloud -->
+    <!-- Theoretically, system scope should be avoided.  -->
+    <!-- But I really don't want to add this weird thing into any maven repository. -->
+    <dependencySet>
+      <outputDirectory>lib</outputDirectory>
+      <scope>system</scope>
+    </dependencySet>
+
+  </dependencySets>
+</assembly>

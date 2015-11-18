@@ -1,0 +1,13 @@
+<dl class="f-side-nav">
+    <dt>表单管理</dt>
+    {{~it:list}}
+	    {{?list.published}}
+	    <dd data-id="{{=list.id}}" data-date="{{=list.created_at}}"><span data-action="survey-stat">{{!list.title}}<!-- <i class="f-red-doc"></i> --></span><em class="iconfont" data-action="del-survey">&#xe611;</em></dd>
+	    {{??}}
+	    <dd data-id="{{=list.id}}"><span data-action="show-survey">{{!list.title}}(未发布)</span><em class="iconfont" data-action="del-survey">&#xe611;</em></dd>
+	    {{?}}
+    {{~}}
+</dl>
+<div class="f-side-btn">
+    <a href="javascript:void(0);" class="f-btn" data-action="creat-form">新 建</a>
+</div>

@@ -1,0 +1,47 @@
+
+    <fieldset class="f-mold f-fieldset">
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>操作设置</label>
+                <div class="f-grid">
+                    <div class="f-select">
+                        {{?it.required}}
+                        <em data-required="1">该项必选</em>
+                        {{??}}
+                        <em data-required="0">可选填</em>
+                        {{?}}
+                        <i class="iconfont">&#xe601;</i>
+                        <ul class="f-option-list">
+                            <li class="f-option" data-action="option" data-required="1">该项必选</li>
+                            <li class="f-option" data-action="option" data-required="0">可选填</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>编辑标题</label>
+                <div class="f-grid">
+                    <input type="text" class="f-input" {{?it.title == "默认标题"}}placeholder="{{!it.title}}"{{??}} value="{{!it.title}}"{{?}} data-name="title" />
+                </div>
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入25个字</em>
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>描述文字</label>
+                <div class="f-grid">
+                    <textarea type="text" class="f-textarea" data-name="description" {{?it.description == "输入上传图片的相关描述"}}placeholder="{{!it.description}}"{{??it.description == ""}}placeholder="输入上传图片的相关描述"{{?}}>{{?it.description != "输入对图片的描述文字"||""}}{{!it.description}}{{?}}</textarea>
+                </div>
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入100个字</em>
+            </div>
+        </div>
+        <em option-name="id_image" style="display:none"></em>
+    </fieldset>

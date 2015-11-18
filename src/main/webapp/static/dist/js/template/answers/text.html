@@ -1,0 +1,29 @@
+<article class="f-modal f-text-answer">
+	<div class="f-modal-title">
+		<h3>答案列表</h3>
+		<!-- <div class="f-title-btn"><a href="javascript:void(0);" class="f-btn f-btn-blue">导出Excel</a> </div> -->
+	</div>
+	<div class="f-modal-body">
+		<div class="f-text-list">
+			<table>
+				<tr>
+					<th class="f-text-no">问卷序号</th>
+					<th>答案</th>
+					<!-- <th class="f-text-btn">查看详情</th> -->
+				</tr>
+				{{~it.dataList:list}}
+				<tr>
+					<td class="f-text-no">{{=list.no}}</td>
+					<td>{{!list.value}}</td>
+					<!-- <td class="f-text-btn"></td> -->
+				</tr>
+				{{~}}
+			</table>
+		</div>
+		<div class="f-answers-paging">
+                    
+        </div>
+	</div>
+	<a href="javascript:void(0);" data-action="close-modal" class="f-close-modal"><i class="iconfont">&#xe605;</i></a>
+</article>
+<div class="f-modal-mask" data-action="remove-modal"></div>

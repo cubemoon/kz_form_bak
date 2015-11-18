@@ -1,0 +1,24 @@
+function(id, result) {
+    if (result.name == "id_text" || result.name == "id_textarea" || result.name == "id_image"){
+        return result;
+    }
+    
+    var val_list = [];
+    var len = 0;
+    for(var k in result.value){len++;}
+    for (var i = 0; i < len; i++) {
+        var count = result.value[i];
+        var name = result.value_name[i];
+        var item = {"lid" : i, "name" : name, "selected_count" : count};  
+              
+        if(result.name == "id_image_radio" || result.name == "id_image_checkbox"){
+        	var img = result.value_img[i];
+        	item.img = img;            
+        }
+        val_list.push(item);
+    }
+    result.value = val_list;
+    delete result.value_name;    
+    delete result.value_img;
+    return result;
+}

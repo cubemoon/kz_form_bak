@@ -1,0 +1,13 @@
+{
+    "entrance": "/survey",
+    "proxy-prefixes": {
+        "common": "http://10.10.79.134:8086",
+        "backend-page": "http://10.10.79.134:8086",
+        "backend-api": "http://10.10.79.134:8086",
+        "page": "http://10.10.79.134:8086",
+        "api": "http://10.10.79.134:8086"
+    },
+    "proxy-paths": {
+        "common": "*"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "entrance": "/survey",
+    "proxy-prefixes": {
+        "common": "http://form.kuaizhan.sohuno.com",
+        "backend-page": "http://form.kuaizhan.sohuno.com",
+        "backend-api": "http://form.kuaizhan.sohuno.com",
+        "page": "http://form.kuaizhan.sohuno.com",
+        "api": "http://form.kuaizhan.sohuno.com"
+    },
+    "proxy-paths": {
+        "common": "*"
+    }
+}

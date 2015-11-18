@@ -1,0 +1,14 @@
+<section class="f-form-item"  data-name="id_picture" current="true">
+    <div class="f-item-wrap">
+        <div class="f-control">
+            <a href="{{=it.url}}">
+                {{?it.img}}
+                <img class="f-img" src="{{=it.img}}" />
+                {{?}}
+            </a>
+        </div>
+        <div class="f-descriptions"><span>{{!it.descriptions}}</span></div>
+    </div>
+    <div class="f-item-mask" data-action="edit-picture"></div>
+    <i class="iconfont f-item-del" >&#xe605;</i>
+</section>

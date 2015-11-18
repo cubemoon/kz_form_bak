@@ -1,0 +1,14 @@
+<div class="f-control f-setting-option">
+	<label>编辑选项</label>
+	<div class="f-grid"> 
+	<input type="text" class="f-input"  data-name="option" {{?it.text}}value="{{!it.text}}{{??}}placeholder="新建选项"{{?}}" />
+	</div>
+	{{?it.img}}
+	<a href="javascript:void(0);" class="f-edit-button f-edit-pic-button" >
+        <i class="iconfont">&#xe60f;</i>
+        <input type="file" data-action="add-pic"/>
+    </a>
+    {{?}}
+	<a href="#" class="f-edit-button" data-action="del-item"><i class="iconfont">&#xe602;</i></a>
+	<a href="#" class="f-edit-button" data-action="add-item"><i class="iconfont">&#xe604;</i></a>
+</div>

@@ -1,0 +1,141 @@
+{{?it.dataList.length > 0}}
+<div class="f-view-wrap">
+    <ul class="f-view-tab">
+        <li class="curr"><a href="javascript:void(0);" data-action="show-answer-page">反馈查看</a></li>
+        <li ><a href="javascript:void(0);" data-action="show-table-page">统计数据</a></li>
+    </ul>
+    <div class="f-mold f-view f-model" page-id="answer">
+        <section class="f-model-title">
+            <div class="f-title">
+                <h1>{{!it.dataList[0].title}}</h1>
+                <span>{{=it.date}}&nbsp;&nbsp;&nbsp;&nbsp;共<em>{{=it.totalCount}}</em>条</span>   
+            </div>
+            <div class="f-title-btn f-end">
+                <a class="f-btn f-btn-blue" data-action="export" href="javascript:void(0);">导出Excel</a>
+                <a class="f-btn f-btn-blue" data-action="open-share" href="javascript:void(0);">分享表单</a>
+            </div>
+        </section>
+        <div class="f-model-wrap">
+            <div class="f-model-body">
+                <div class="f-model-nav">
+                    <div class="f-model-edit">
+                        <ul class="f-model-tab">
+                            <li select-type="all" {{?it.other == 'all'}}class="curr"{{?}}><a href="javascript:void(0);">全部</a></li>
+                            <li select-type="star" {{?it.other == 'star'}}class="curr"{{?}}><a href="javascript:void(0);">星标</a></li>
+                            <li select-type="done" {{?it.other == 'done'}}class="curr"{{?}}><a href="javascript:void(0);">未处理</a></li>
+                            <li select-type="unread" {{?it.other == 'unread'}}class="curr"{{?}}><a href="javascript:void(0);">未读</a></li>
+                        </ul>
+                        <a href="javascript:void(0);" class="f-btn" data-action="{{?it.reverse}}reverse{{?}}{{?it.sort}}sort{{?}}">{{?it.reverse}}倒序<i class=iconfont>&#xe619;</i>{{?}}{{?it.sort}}升序<i class=iconfont>&#xe618;</i>{{?}}</a>
+                    </div>
+                    <div class="f-model-list"></div>
+                </div>
+                <div class="f-model-show">
+                    <div class="f-show-con f-scroll"></div>
+                </div>
+            </div>
+            <div class="f-model-paging">
+                    
+            </div>
+        </div>
+    </div>
+    <div class="f-mold f-view f-table" page-id="table" style="display:none">
+        
+    </div>
+</div>
+{{??it.range}}
+<div class="f-view-wrap">
+    <ul class="f-view-tab">
+        <li class="curr"><a href="javascript:void(0);">反馈查看</a></li>
+        <!-- <li ><a href="javascript:void(0);">统计数据</a></li> -->
+    </ul>
+    <div class="f-mold f-view f-model" page-id="answer">
+        <section class="f-model-title">
+            <div class="f-title">
+                <h1>{{=it.title}}</h1>
+                <span>{{=it.date}}&nbsp;&nbsp;&nbsp;&nbsp;暂无反馈</span>   
+            </div>
+            <div class="f-title-btn f-end">
+                <a class="f-btn f-btn-diseble" href="javascript:void(0);">导出Excel</a>
+                <a class="f-btn f-btn-blue" data-action = "open-share" href="javascript:void(0);">分享表单</a>
+            </div>
+        </section>
+        <div class="f-model-wrap">
+            <div class="f-model-body">
+            <div class="f-model-nav">
+                <div class="f-model-edit">
+                    <ul class="f-model-tab">
+                        <li class="curr"><a href="javascript:void(0);">全部</a></li>
+                        <li><a href="javascript:void(0);">星标</a></li>
+                        <li><a href="javascript:void(0);">未处理</a></li>
+                        <li><a href="javascript:void(0);">未读</a></li>
+                    </ul>
+                    <a href="javascript:void(0);" class="f-btn f-btn-diseble">升序<i class=iconfont>&#xe618;</i></a>
+                </div>
+                <div class="f-model-list">
+                    
+                </div>
+            </div>
+                <div class="f-model-show">
+                    <div class="f-show-con f-scroll">
+
+                    </div>
+                </div>
+            </div>
+            <div class="f-model-paging">
+                    
+            </div>
+        </div>
+    </div>
+    <div class="f-mold f-view f-table" page-id="table" style="display:none">
+        
+    </div>
+</div>
+{{??}}
+<div class="f-view-wrap">
+    <ul class="f-view-tab">
+        <li class="curr"><a href="javascript:void(0);" data-action="show-answer-page">反馈查看</a></li>
+        <li ><a href="javascript:void(0);" data-action="show-table-page">统计数据</a></li>
+    </ul>
+    <div class="f-mold f-view f-model" page-id="answer">
+        <section class="f-model-title">
+            <div class="f-title">
+                <h1>当前没有记录</h1>
+                <span>共<em>0</em>条</span>   
+            </div>
+            <div class="f-title-btn f-end">
+                <a class="f-btn f-btn-blue" data-action="export" href="javascript:void(0);">导出Excel</a>
+                <a class="f-btn f-btn-blue" data-action = "open-share" href="javascript:void(0);">分享表单</a>
+            </div>
+        </section>
+        <div class="f-model-wrap">
+            <div class="f-model-body">
+            <div class="f-model-nav">
+                <div class="f-model-edit">
+                    <ul class="f-model-tab">
+                        <li select-type="all" {{?it.other == 'all'}}class="curr"{{?}}><a href="javascript:void(0);">全部</a></li>
+                        <li select-type="star" {{?it.other == 'star'}}class="curr"{{?}}><a href="javascript:void(0);">星标</a></li>
+                        <li select-type="done" {{?it.other == 'done'}}class="curr"{{?}}><a href="javascript:void(0);">未处理</a></li>
+                        <li select-type="unread" {{?it.other == 'unread'}}class="curr"{{?}}><a href="javascript:void(0);">未读</a></li>
+                    </ul>
+                    <a href="javascript:void(0);" class="f-btn f-btn-diseble">升序<i class=iconfont>&#xe618;</i></a>
+                </div>
+                <div class="f-model-list">
+                    
+                </div>
+            </div>
+                <div class="f-model-show">
+                    <div class="f-show-con f-scroll">
+
+                    </div>
+                </div>
+            </div>
+            <div class="f-model-paging">
+                    
+            </div>
+        </div>
+    </div>
+    <div class="f-mold f-view f-table" page-id="table" style="display:none">
+        
+    </div>
+</div>
+{{?}}

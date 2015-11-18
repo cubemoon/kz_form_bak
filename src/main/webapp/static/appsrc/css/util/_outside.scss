@@ -1,0 +1,45 @@
+.f-p-wrap{
+	.f-outside-wx,.f-outside-wb,.f-outside-rr,.f-outside-qz,.f-outside-db,.f-outside-qwb{
+		width:50px;
+		height: 50px;
+		box-sizing: border-box;
+		border:$moldBorder 1px solid;
+		border-radius: 3px;
+		text-align: center;
+		line-height: 48px;
+		cursor: pointer;
+	}
+	.f-outside-wx i,.f-outside-wb i,.f-outside-rr i,.f-outside-qz i,.f-outside-db i,.f-outside-qwb i{
+		font-size: 35px;
+	}
+	.f-outside-wx:hover{
+		border:#9acf4f 1px solid;
+		background: #9acf4f;
+		color: #fff;
+	}
+	.f-outside-wb:hover{
+		border:#ef4e41 1px solid;
+		background: #ef4e41;
+		color: #fff;
+	}
+	.f-outside-rr:hover{
+		border:#17a3eb 1px solid;
+		background: #17a3eb;
+		color: #fff;
+	}
+	.f-outside-qz:hover{
+		border:#ffb709 1px solid;
+		background: #ffb709;
+		color: #fff;
+	}
+	.f-outside-db:hover{
+		border:#45ad76 1px solid;
+		background: #45ad76;
+		color: #fff;
+	}
+	.f-outside-qwb:hover{
+		border:#13c1f3 1px solid;
+		background: #13c1f3;
+		color: #fff;
+	}
+}

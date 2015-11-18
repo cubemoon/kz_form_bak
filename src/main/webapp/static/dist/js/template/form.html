@@ -1,0 +1,177 @@
+	<div class="f-form-title">
+		<h1 data-id="{{=it.id}}" data-siteid="{{=it.site_id}}">{{!it.title}}</h1>
+		<p class="f-subtitle">{{!it.subtitle}}</p>
+	</div>
+	{{~it.fields:list}}
+		{{?list.name == 'id_checkbox'}}
+			<section class="f-form-item" data-name="id_checkbox"  data-id="{{=list.id}} " data-required="{{=list.required}}">
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					{{~list.value:item}}
+					<div class="f-control" data-type="list">
+						<label data-lid="{{=item.lid}}">
+							<input type="checkbox" class="f-checkbox" />
+							<em class="f-chengge-checked">
+								<i class="iconfont checken-01">&#xe615;</i>
+								<i class="iconfont checken-02">&#xe616;</i>
+							</em>
+							<span>{{!item.name}}</span>
+						</label>
+					</div>
+					{{~}}
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_image_checkbox'}}
+			<section class="f-form-item" data-name="id_checkbox" data-id="{{=list.id}}" data-required="{{=list.required}}">
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					{{~list.value:item}}
+					<div class="f-control" data-type="list">
+						<label data-lid="{{=item.lid}}" class="f-hasImg">
+							<input type="checkbox" class="f-checkbox" />
+							<em class="f-chengge-checked">
+								<i class="iconfont checken-01">&#xe615;</i>
+								<i class="iconfont checken-02">&#xe616;</i>
+							</em>
+							{{?item.img}}
+							<em class="f-img">
+								<img src="{{=item.img}}">
+							</em>
+							{{?}}
+							<span>{{!item.name}}</span>
+						</label>
+					</div>
+					{{~}}
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_radio'}}
+			<section class="f-form-item"  data-name="id_radio" data-id="{{=list.id}}" data-required="{{=list.required}}" >
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					{{~list.value:item}}
+					<div class="f-control" data-type="list">
+						<label data-lid="{{=item.lid}}">
+							<input type="radio" class="f-radio" name="{{=list.id}}" />
+							<em class="f-chengge-checked">
+								<i class="iconfont checken-01">&#xe613;</i>
+								<i class="iconfont checken-02">&#xe614;</i>
+							</em>
+							<span>{{!item.name}}</span>
+						</label>
+					</div>
+					{{~}}
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_image_radio'}}
+			<section class="f-form-item"  data-name="id_radio" data-id="{{=list.id}}" data-required="{{=list.required}}">
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					{{~list.value:item}}
+					<div class="f-control" data-type="list">
+						<label data-lid="{{=item.lid}}" class="f-hasImg">
+							<input type="radio" class="f-radio" name="{{=list.id}}" />
+							<em class="f-chengge-checked">
+								<i class="iconfont checken-01">&#xe613;</i>
+								<i class="iconfont checken-02">&#xe614;</i>
+							</em>
+							{{?item.img}}
+							<em class="f-img">
+								<img src="{{=item.img}}">
+							</em>
+							{{?}}
+							<span>{{!item.name}}</span>
+
+						</label>
+					</div>
+					{{~}}
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_section'}}
+			<section class="f-form-item"  data-name="id_section" data-id="{{=list.id}}">
+				<h2><em>{{!list.title}} </em></h2>
+				<div class="f-item-wrap">
+					<div class="f-control">
+						<hr class="f-line" />
+					</div>
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_text'}}
+			<section class="f-form-item" data-name="id_text" data-id="{{=list.id}}" data-required="{{=list.required}}">
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					<div class="f-control">
+					<input type="{{=list.type}}" class="f-input"  data-name="text"/>
+					</div>
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_textarea'}}
+			<section class="f-form-item" data-name="id_textarea" data-id="{{=list.id}}" data-required="{{=list.required}}">
+				<h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+				<div class="f-item-wrap">
+					<div class="f-control">
+						<textarea class="f-textarea"  data-name="text"></textarea>
+					</div>
+				</div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_dropdown'}}
+			<section class="f-form-item"  data-name="id_dropdown" data-id="{{=list.id}}" data-required="{{=list.required}}">
+			    <h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+			    <div class="f-item-wrap">
+			        <div class="f-control">
+			            <div class="f-select clearfix">
+			                <em>请选择</em>
+			                <i class="iconfont">&#xe601;</i>
+			                <ul class="f-option-list"  data-type="select" style="display:none">
+			                    {{~list.value:item}}
+			                    <li class="option" data-action="option" data-lid={{=item.lid}}>{{!item.name}}</li>
+			                    {{~}}
+			            	</ul>
+			            </div>	
+			        </div>
+			    </div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_image'}}
+			<section class="f-form-item"  data-name="id_image" data-id="{{=list.id}}" data-required="{{=list.required}}">
+			    <h2><em>{{!list.title}} </em>{{?list.required}}<span>*</span>{{??}}{{?}}</h2>
+			    <div class="f-item-wrap">
+					<div class="f-description"><span>{{!list.description}}</span></div>
+					<div class="f-control">
+						<span class="f-span">选择图片</span>
+						<input type="file" class="file-image" data-name="fileImage" data-action="add-image" size="28" />
+						<div class="image-style">
+							<a href="javascript:void(0);">
+								{{?list.img}}
+								<img class="f-image" src="{{=list.img}}" />
+								{{?}}
+							</a>
+						</div>
+					</div>
+			    </div>
+			</section>
+		{{?}}
+		{{?list.name == 'id_picture'}}
+			<section class="f-form-item"  data-name="id_picture" data-id="{{=list.id}}">
+				<div class="f-item-wrap">
+					<div class="f-control">
+						<a href="{{=list.url}}">
+							{{?list.img}}
+							<img class="f-image" src="{{=list.img}}" />
+							{{?}}
+						</a>
+					</div>
+					<div class="f-descriptions"><span>{{!list.descriptions}}</span></div>
+				</div>
+			</section>
+		{{?}}
+	{{~}}
+	<div class="f-btn-wrap">
+		<a href="javascript:void(0);" data-action="post-form">提交</a>
+	</div>

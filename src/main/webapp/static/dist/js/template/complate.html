@@ -1,0 +1,53 @@
+<div class="f-complete-wrap">
+    <div class="f-p-tips"><i class="iconfont">&#xe612;</i>您的表单已经生成，您可以通过拖拽高级表单组件或者在其他组件中添加链接的方式插入您的表单，或采用其他方式分享。</div>
+    <section class="f-section-control">
+        <h2 class="f-s-title">高级表单组件添加</h2>
+        <div class="f-figure">
+            <div class="f-img-ctrl f-form-icon"></div>
+            <div class="f-caption">
+                <div class="f-c-con">在页面中拖入高级表单组件即可插入已发布的任意表单</div>
+                <div class="f-c-con">
+                    <a class="f-btn f-btn-blue" href="/pageui/?site_id={{=it.siteId}}">前往页面添加</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="f-section-control">
+        <h2 class="f-s-title">二维码分享</h2>
+        <div class="f-figure">
+            <div class="f-img-ctrl"><img src="http://form.kuaizhan.com/forms/{{=it.id}}/qrcode" id="f_qrcode"></div>
+            <div class="f-caption">
+                <div class="f-c-con">点击下列按钮即可分享二维码，扫码可直接填写</div>
+                <div class="f-c-con">
+                    <ul class="f-list">
+                        <li class="f-outside-wx f-list-item">
+                            <i class="iconfont">&#xe608;</i>
+                            <div class="f-arrow-tips">微信扫描二维码有惊喜</div>
+                        </li>
+                        <li class="f-outside-wb f-list-item"><i class="iconfont">&#xe607;</i></li>
+                        <li class="f-outside-rr f-list-item"><i class="iconfont">&#xe60b;</i></li>
+                        <li class="f-outside-qz f-list-item"><i class="iconfont">&#xe60c;</i></li>
+                        <li class="f-outside-db f-list-item"><i class="iconfont">&#xe609;</i></li>
+                        <li class="f-outside-qwb f-list-item"><i class="iconfont">&#xe60d;</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="f-section-control">
+        <h2 class="f-s-title">独立页面链接</h2>
+        <div class="f-figure">
+            <div class="f-caption">
+                <div class="f-c-con">
+                    <div class="f-list">
+                        <input type="text" class="f-list-item f-complate-input" value="http://form.kuaizhan.com/forms/{{=it.id}}" />
+                        <a href="javascript:void(0);" class="f-list-item" id="f-copy-url">复制链接</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="f-btn-wrap">
+        <a class="f-btn f-btn-blue" href="http://form.kuaizhan.com/forms/{{=it.id}}" target="_blank">填写测试</a>
+    </div>
+</div>

@@ -1,0 +1,193 @@
+<div class="f-table-wrap">
+    <div class="f-table-box" id="answerCanvas"></div>
+
+    {{~it.fields:list}}
+        {{?list.name == 'id_checkbox'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>选择题</em>
+                    <em>多选</em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                {{~list.value:item}}
+                <tr>
+                    <td class="f-table-lebel">{{!item.name}}</td>
+                    <td class="f-table-num">{{=item.selected_count}}</td>
+                    <td class="f-table-progress">
+                        <progress value="{{=Math.floor((item.selected_count / list.valCount)*100)}}" max="100"></progress>
+                        <span>{{?list.valCount <= 0}}0%{{??}}{{=Math.floor((item.selected_count / list.valCount)*100)}}%{{?}}</span>   
+                    </td>
+                </tr>
+                {{~}}
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_image_checkbox'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>选择题</em>
+                    <em>多选</em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                {{~list.value:item}}
+                <tr>
+                    <td class="f-table-lebel">{{!item.name}}</td>
+                    <td class="f-table-num">{{=item.selected_count}}</td>
+                    <td class="f-table-progress">
+                        <progress value="{{=Math.floor((item.selected_count / list.valCount)*100)}}" max="100"></progress>
+                        <span>{{=Math.floor((item.selected_count / list.valCount)*100)}}%</span>  
+                    </td>
+                </tr>
+                {{~}}
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_radio'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>选择题</em>
+                    <em>单选</em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                {{~list.value:item}}
+                <tr>
+                    <td class="f-table-lebel">{{!item.name}}</td>
+                    <td class="f-table-num">{{=item.selected_count}}</td>
+                    <td class="f-table-progress">
+                        <progress value="{{=Math.floor((item.selected_count / list.valCount)*100)}}" max="100"></progress>
+                        <span>{{=Math.floor((item.selected_count / list.valCount)*100)}}%</span>  
+                    </td>
+                </tr>
+                {{~}}
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_image_radio'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>选择题</em>
+                    <em>单选</em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                {{~list.value:item}}
+                <tr>
+                    <td class="f-table-lebel">{{!item.name}}</td>
+                    <td class="f-table-num">{{=item.selected_count}}</td>
+                    <td class="f-table-progress">
+                        <progress value="{{=Math.floor((item.selected_count / list.valCount)*100)}}" max="100"></progress>
+                        <span>{{=Math.floor((item.selected_count / list.valCount)*100)}}%</span>  
+                    </td>
+                </tr>
+                {{~}}
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_section'}}
+        {{?}}
+        {{?list.name == 'id_picture'}}
+        {{?}}
+        {{?list.name == 'id_text'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>单文本</em>
+                    <em></em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td class="f-table-lebel"><a href="javascript:void(0);" data-lid="{{=list.id}}" data-action="show-text">查看内容</a></td>
+                    <td class="f-table-num"></td>
+                    <td class="f-table-progress">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_textarea'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>多文本</em>
+                    <em></em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td class="f-table-lebel"><a href="javascript:void(0);" data-lid="{{=list.id}}" data-action="show-text">查看内容</a></td>
+                    <td class="f-table-num"></td>
+                    <td class="f-table-progress">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_dropdown'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>选择题</em>
+                    <em>单选</em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                {{~list.value:item}}
+                <tr>
+                    <td class="f-table-lebel">{{!item.name}}</td>
+                    <td class="f-table-num">{{=item.selected_count}}</td>
+                    <td class="f-table-progress">
+                        <progress value="{{=Math.floor((item.selected_count / list.valCount)*100)}}" max="100"></progress>
+                        <span>{{=Math.floor((item.selected_count / list.valCount)*100)}}%</span>  
+                    </td>
+                </tr>
+                {{~}}
+            </table>
+        </section>
+        {{?}}
+        {{?list.name == 'id_image'}}
+        <section class="f-table-section">
+            <div class="f-table-section-title">
+                <h2>{{!list.title}}</h2>
+                <div class="f-table-section-type">
+                    <em>传照片</em>
+                    <em></em>
+                    <em>{{?list.required}}必选项{{??}}选填项{{?}}</em>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td class="f-table-lebel"><a href="javascript:void(0);" data-lid="{{=list.id}}" data-action="show-text">查看照片</a></td>
+                    <td class="f-table-num"></td>
+                    <td class="f-table-progress">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        {{?}}
+    {{~}}
+</div>
+
+
+

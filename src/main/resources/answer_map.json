@@ -1,0 +1,39 @@
+function() {
+    var fields = this.fields;
+    for (var i = 0, len = fields.length; i < len; i++) {
+        var field = fields[i];
+        var result = {};
+        if (field.name == "id_section" || field.name == "id_picture") {
+            continue;
+        } else if (field.name == "id_text" || field.name == "id_textarea") {
+            result = {"no": i, "id": field.id, "name": field.name, "title": field.title, "required": field.required, "count": 1};
+        } else if (field.name == "id_image") {
+            result = {"no": i, "id":field.id, "name": field.name,"title": field.title, "required":field.required, "img": field.img};
+        } else if (field.name == "id_dropdown" || field.name == "id_radio" || field.name == "id_checkbox" 
+            || field.name == "id_image_radio" || field.name == "id_image_checkbox") {
+            var result = {"no": i,"id":field.id, "name": field.name, "title": field.title, "required":field.required, "value":{}, "value_name" : {}};
+            if(field.name == "id_image_radio" || field.name == "id_image_checkbox"){
+            	result.value_img = {};
+            }
+            
+            for (var j = 0, len2 = field.value.length; j < len2; j++) {
+                if (field.value[j].lid != -1) {
+                    if (field.value[j].selected) {
+                        result.value[field.value[j].lid] = 1;
+                        result.value_name[field.value[j].lid] = field.value[j].name;
+                        if(field.name == "id_image_radio" || field.name == "id_image_checkbox"){
+			            	result.value_img[field.value[j].lid] = field.value[j].img;
+			            }
+                    } else {
+                        result.value[field.value[j].lid] = 0;
+                        result.value_name[field.value[j].lid] = field.value[j].name;
+                        if(field.name == "id_image_radio" || field.name == "id_image_checkbox"){
+			            	result.value_img[field.value[j].lid] = field.value[j].img;
+			            }
+                    }
+                }
+            }
+        }
+        emit(field.id, result);
+    }
+}

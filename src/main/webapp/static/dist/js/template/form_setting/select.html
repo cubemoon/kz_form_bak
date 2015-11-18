@@ -1,0 +1,48 @@
+
+    <fieldset class="f-mold f-fieldset">
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>操作设置</label>
+                <div class="f-grid">
+                    <div class="f-select">
+                    {{?it.required}}
+                        <em data-required="1">该项必选</em>
+                    {{??}}
+                        <em data-required="0">可选填</em>
+                    {{?}}
+                        <i class="iconfont">&#xe601;</i>
+                        <ul class="f-option-list">
+                            <li class="f-option" data-action="option" data-required="1">该项必选</li>
+                            <li class="f-option" data-action="option" data-required="0">可选填</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>编辑标题</label>
+                <div class="f-grid">
+                    <input type="text" class="f-input" {{?it.title == '默认标题'}}placeholder="{{!it.title}}"{{??}} value="{{!it.title}}"{{?}} data-name="title" />
+                </div>  
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入25个字</em>
+            </div>
+        </div>
+        <div class="f-control-group f-control-group-select">
+            {{~it.value:list}}
+            <div class="f-control f-setting-option">
+                <label>编辑选项</label>
+                <div class="f-grid"> 
+                     <input type="text" class="f-input" {{?list.name == '默认选项'}}placeholder="{{!list.name}}" {{??list.name == '新建选项'}}placeholder="{{!list.name}}"{{??}}value="{{!list.name}}"{{?}}data-name="option" />
+                </div>
+                <a href="#" class="f-edit-button" data-action="del-item"><i class="iconfont">&#xe602;</i></a>
+                <!-- <em class="f-select-placeholder"></em> -->
+                <a href="#" class="f-edit-button" data-action="add-item"><i class="iconfont">&#xe604;</i></a>
+            </div>
+            {{~}}
+        </div>
+        <em option-name="id_dropdown" style="display:none"></em>
+    </fieldset>

@@ -1,0 +1,68 @@
+
+    <fieldset class="f-mold f-fieldset">
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>操作设置</label>
+                <div class="f-grid">
+                    <div class="f-select">
+                    {{?it.required == 1}}
+                        <em data-required="1">该项必选</em>
+                    {{??}}
+                        <em data-required="0">可选填</em>
+                    {{?}}
+                        <i class="iconfont">&#xe601;</i>
+                        <ul class="f-option-list">
+                            <li class="f-option" data-action="option" data-required="1">该项必选</li>
+                            <li class="f-option" data-action="option" data-required="0">可选填</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="f-grid">
+                    <div class="f-select">
+                        {{?it.name == 'id_textarea'}}
+                        <em option-name="id_textarea">多行文本</em>
+                        {{??}}
+                        <em option-name="id_text">单行文本</em>
+                        {{?}}
+                        <i class="iconfont">&#xe601;</i>
+                        <ul class="f-option-list">
+                            <li class="f-option" data-action="option" option-name="id_text">单行文本</li>
+                            <li class="f-option" data-action="option" option-name="id_textarea">多行文本</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f-grid" id="f_text_type">
+                    <div class="f-select">
+                        {{?it.type == 'email'}}
+                        <em text-type="email">Email</em>
+                        {{??it.type == 'tel'}}
+                        <em text-type="tel">手机号</em>
+                        {{??it.type == 'date'}}
+                        <em text-type="date">日期</em>
+                        {{??}}
+                        <em text-type="text">不限内容</em>
+                        {{?}}
+                        <i class="iconfont">&#xe601;</i>
+                        <ul class="f-option-list">
+                            <li class="f-option" data-action="option" text-type="text">不限内容</li>
+                            <li class="f-option" data-action="option" text-type="email">Email</li>
+                            <li class="f-option" data-action="option" text-type="tel">手机号</li>
+                            <li class="f-option" data-action="option" text-type="date">日期</li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>编辑标题</label>
+                <div class="f-grid">
+                    <input type="text" class="f-input"  placeholder="{{!it.title}}" data-name="title" />
+                </div>  
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入25个字</em>
+            </div>
+        </div>
+    </fieldset>

@@ -1,0 +1,408 @@
+.f-p-wrap{
+	@include display-flex;
+	@include align-items(flex-start);
+	color:$textGrey;
+}
+.f-p-wrap{
+	.red{
+		color: #ff3300;
+	}
+	.f-start{
+		@include align-self(flex-start)
+		//align-self:flex-start;
+	}
+	.f-end{
+		margin-left:auto;
+	}
+	.f-center{
+		margin: 0 auto;
+	}
+	//btn
+	.f-btn{
+		display: inline-block;
+		border:$inputBorder 1px solid;
+		border-radius: 3px;
+		padding:5px 25px;
+		color: $textGrey;
+		text-decoration: none;
+		font-size:14px;
+	}
+	.f-btn i, .f-btn span, .f-btn em{
+		vertical-align: middle;
+	}
+	.f-btn i{
+		font-size: 16px;
+		margin-right: 5px;
+	}
+	.f-btn:hover{
+		background:#fff;
+		color: $textBlue;
+	}
+	.f-btn-gery{
+		background:#fff;
+		color: $textGrey;
+	}
+	.f-btn-gery:hover{
+		color: $textBlue;
+		border:$textBlue 1px solid;
+	}
+	.f-btn-diseble{
+		color: #fff;
+		background: #d9d9d9;
+		border:#d9d9d9 1px solid;
+		cursor: default;
+	}
+	.f-btn-diseble:hover{
+		color: #fff;
+		background: #d9d9d9;
+	}
+	.f-btn-blue{
+		background:$bgBlue;
+		color: #fff;
+		border:$bgBlue 1px solid;
+	}
+	.f-btn-blue:hover{
+		opacity: 0.7;
+	}
+	.f-edit-button{
+		width:30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background:#e6f3fb;
+		text-decoration: none;
+		margin-right: 10px;
+		border-radius:4px;
+	}
+	.f-edit-button i{
+		font-size: 18px;
+		color: $textBlue;
+		opacity: 0.4;
+	}
+	.f-edit-button:hover i{
+		opacity: 1;
+	}
+	.f-edit-pic-button{
+		background:none;
+		overflow: hidden;
+		position: relative;
+		width:34px;
+		height: 30px;
+	}
+	.f-edit-pic-button input{
+		width: 34px;
+		height: 30px;
+		opacity: 0;
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 10;
+	}
+	.f-edit-pic-button i{
+		font-size: 34px;
+	}
+	.f-edit-delpic-button i{
+		opacity: 1;
+	}
+	//fieldset
+	.f-fieldset{
+		font-size: 14px;
+	}
+	input[type=text], input[type=tel], input[type=date], input[type=email], textarea{
+		box-shadow:none;
+		border:$inputBorder 1px solid;
+		border-radius: 3px;
+	}
+	.f-input-div{
+		width: 100%;
+		box-sizing: border-box;
+		font-size:12px;
+		box-shadow:none;
+		border:$inputBorder 1px solid;
+		border-radius: 3px;
+		padding:5px;
+		word-break: break-all;
+		max-height:90px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	input[type=text]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus, textarea:focus{
+		border:$textBlue 1px solid;
+		box-shadow:none;
+	}
+	input[type=text]:hover,input[type=tel]:hover, input[type=date]:hover, input[type=email]:hover, textarea:hover{
+		box-shadow:none;
+	}
+	.f-fieldset .f-control-group{
+		margin:0 0 25px 0;
+	}
+	.f-fieldset .f-control{
+		@include display-flex;
+		@include align-items(center);
+	}
+	.f-fieldset .f-control label{
+		width: 85px;
+	}
+	.f-fieldset .f-grid{
+		@include flex(1);
+		margin: 0 10px 0 0;
+	}
+	.f-fieldset .f-input{
+		width:100%;
+		font-size: 14px;
+		box-sizing: border-box;
+		height: 30px;
+	}
+	.f-fieldset .f-textarea{
+		width:100%;
+		font-size: 14px;
+		box-sizing: border-box;
+		height: 90px;
+		resize: none;
+	}
+	.f-control-tips{
+		padding: 3px 0 0 85px;
+	}
+	.f-control-tips label,.f-control-tips em{
+		display: inline-block;
+		padding: 2px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+	.f-control-tips label{
+		background:#d7d7d7;
+		color: #fff;
+		margin-right: 3px;
+		border-radius:2px;
+	}
+	.f-control-tips em{
+		color:$tipGrey;
+	}
+	.f-p-tips{
+		color: $textBlue;
+		font-size: 14px;
+	}
+	.f-p-tips i{
+		font-size: 24px;
+		margin-right: 10px;
+	}
+	.f-arrow-tips{
+		display: none;
+	}
+	.f-outside-wx:hover .f-arrow-tips{
+		display: block;
+		padding: 5px 20px;
+		line-height: 13px;
+		position:absolute;
+		background: #e8f4fb;
+		border:$borderBlue 1px solid;
+		border-radius:4px;
+		color: $textGrey;
+	}
+	.f-arrow-tips::after,.f-arrow-tips::before{
+		display: block;
+		width: 0px;
+		height: 0px;
+		content: "";
+		border-right:7px rgba(0, 0, 0, 0) solid;
+		border-top:7px rgba(0, 0, 0, 0) solid;
+		border-left:7px rgba(0, 0, 0, 0) solid;
+		position: absolute;
+	}
+	.f-arrow-tips::after{
+		border-bottom:7px $borderBlue solid;
+		left: 20px;
+		top: -14px;
+		z-index: 1;
+	}
+	.f-arrow-tips::before{
+		border-bottom:7px #e8f4fb solid;
+		left: 20px;
+		top: -13px;
+		z-index: 2;
+	}
+
+	.f-btn-wrap{
+		padding: 20px 0;
+		margin:0 20px;
+		border-top:$moldBorder 1px solid;
+	}
+	.f-btn-wrap .f-btn{
+		margin-right:20px;
+	}
+	//mold
+	.f-mold{
+		border:$moldBorder 1px solid;
+		border-radius: 5px;
+		background:$moldBg;
+	}
+	.f-nav-bg{
+		position: fixed;
+		width:$asideWidth;
+		top: 0;
+		bottom:0;
+		left:0;
+		z-index: 1;
+		border-right: $moldBorder 1px solid;
+		background: $moldBg;
+	}
+	.f-con-bg{
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom:0;
+		left:0;
+		background: #ededed;
+		z-index: -1;
+	}
+	.f-side{
+		width:$asideWidth;
+		position:relative;
+		z-index: 2;
+	}
+	.f-side-nav{
+	}
+	.f-side-nav dt, .f-side-nav dd{
+		border-bottom:$liBorder 1px solid;
+	}
+	.f-side-nav dt{
+		height: 55px;
+		line-height: 55px;
+		padding: 0 0 0 20px;
+		font-size: 16px;
+	}
+	.f-side-nav dd{
+		@include display-flex;
+		@include align-items(flex-start);
+		height: 50px;
+		line-height: 50px;
+		padding:0 15px 0 31px;
+		font-size:14px;
+		cursor: pointer;
+		border-left: #ededed 4px solid;
+	}
+	.f-side-nav dd:hover{
+		color: $textBlue;
+	}
+	.f-side-nav dd span{
+		@include flex(1);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.f-side-nav dd em{
+		display: none;
+	}
+	.f-side-nav dd:hover em{
+		display: inline-block;
+		width: 24px;
+		overflow: hidden;
+		font-size: 24px;
+	}
+	.f-side-nav dd .f-red-doc{
+		width:5px;
+		height: 5px;
+		border-radius:100%;
+		background:#ff0000;
+		overflow: hidden;
+		display: inline-block;
+		margin: 0 0 7px 3px;
+	}
+	.f-side-nav dd.curr{
+		color: $textBlue;
+		border-left: $bgBlue 4px solid;
+		padding:0 15px 0 31px;
+	}
+	.f-side-btn{
+		padding:20px 0 20px 0;
+		text-align:center;
+	}
+	.f-side-btn .f-btn{
+		padding:13px 100px;
+		border:$textBlue 1px solid;
+		color: $textBlue;
+		background: #fff;
+	}
+	.f-side-btn .f-btn:hover{
+		border:$textBlue 1px solid;
+		background:$textBlue;
+		color: #fff;
+	}
+	.f-con{
+		@include flex(1);
+	}
+	.f-doc{
+		display: inline-block;
+		width:10px;
+		height:10px;
+		border-radius: 50%;
+		background: $bgBlue;
+	}
+	.f-modal{
+		background:#f7f7f7;
+		border-radius:4px;
+		padding:15px;
+		position:fixed;
+		z-index: 1001;
+	}
+	.f-modal .f-close-modal{
+		position:absolute;
+		right: 10px;
+		top: 10px;
+		z-index: 10;
+		text-decoration: none;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.f-modal .f-close-modal i{
+		font-size: 30px;
+	}
+	.f-modal-title{
+		font-size: 16px;
+		@include display-flex;
+		@include align-items(center);
+		height: 55px;
+	}
+	.f-modal-title .f-title-btn{
+		margin: 0 0 0 auto;
+	}
+	.f-modal-mask{
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background:#000;
+		opacity: 0.3;
+		z-index: 1000;
+	}
+	.f-paging{
+		@include display-flex;
+		font-size: 14px;
+		justify-content: center;
+	}
+	.f-paging li{
+	}
+	.f-paging a{
+		color:#666;
+		line-height: 15px;
+		padding: 2px 5px;
+		background: #fff;
+		display:inline-block;
+		margin-right: 5px;
+		border-radius:3px;
+	}
+	.f-answers-paging .f-paging a{
+		background: #f7f7f7;
+	}
+	.f-paging a.curr{
+		color:#fff;
+		background:$bgBlue;
+	}
+	.f-paging a.unclick{
+		color:#ccc;
+	}
+}

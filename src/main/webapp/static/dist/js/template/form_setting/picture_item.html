@@ -1,0 +1,12 @@
+<div class="f-control f-setting-option">
+    <label>选择图片</label>
+    <div class="f-grid">
+        <input type="text" class="f-input" placeholder="请选择小于5M的文件进行上传" data-name="name" readonly="readonly">
+    </div>
+    {{?it.img}}
+    <a href="javascript:void(0);" class="f-edit-button f-edit-pic-button" >
+        <i class="iconfont">&#xe60f;</i>
+        <input type="file" data-action="add-picture"/>
+    </a>
+    {{?}}
+</div>

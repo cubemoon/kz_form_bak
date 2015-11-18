@@ -1,0 +1,18 @@
+<section class="f-form-item"  data-name="id_radio" current="true">
+	<h2><em>{{!it.title}}</em>{{?it.required ==1}}<span>*</span>{{??}}{{?}}</h2>
+	<div class="f-item-wrap">
+		{{~it.value:list}}
+		<div class="f-control" data-type="list">
+			<label>
+				<input type="radio" />
+				{{?list.img}}
+				<em class="f-img"><img src="{{=list.img}}"></em>
+				{{?}}
+				<span>{{!list.name}}</span>
+			</label>
+		</div>
+		{{~}}
+	</div>
+	<div class="f-item-mask" data-action="edit-radio"></div>
+	<i class="iconfont f-item-del" >&#xe605;</i>
+</section>

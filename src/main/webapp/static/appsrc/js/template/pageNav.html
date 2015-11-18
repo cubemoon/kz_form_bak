@@ -1,0 +1,14 @@
+<ul class="f-paging">
+	<li><a href="javascript:void(0);" {{?it.noPre}}class="hide"{{?}}  data-page="{{=it.pre}}" data-action="gotopage">上一页</a></li>
+	<li><a href="javascript:void(0);" {{?it.noPre}}class="hide"{{?}}  data-page="{{=it.first}}" data-action="gotopage">首页</a></li>
+	{{~it.pages:page}}
+		{{?page.currentPage}}
+		<li><a class="curr" href="javascript:void(0);" >{{=page.num}}</a></li>
+		{{??}}
+		<li><a href="javascript:void(0);"  data-page="{{=page.num}}" data-action="gotopage">{{=page.num}}</a></li>
+		{{?}}
+	{{~}}
+	<li><a href="javascript:void(0);" {{?it.noNext}}class="hide"{{?}}   data-page="{{=it.last}}" data-action="gotopage">尾页</a></li>
+	<li><a href="javascript:void(0);" {{?it.noNext}}class="hide"{{?}}   data-page="{{=it.next}}" data-action="gotopage">下一页</a></li>
+	<li>共{{=it.max}}页</li>
+</ul>

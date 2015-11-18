@@ -1,0 +1,42 @@
+
+    <fieldset class="f-mold f-fieldset">
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>图片描述</label>
+                <div class="f-grid">
+                    <textarea type="text" class="f-textarea" data-name="descriptions" {{?it.descriptions == "输入对图片的相关描述"}}placeholder="{{!it.descriptions}}"{{??it.descriptions == ""}}placeholder="输入对图片的相关描述"it.descriptions= "输入对图片的相关描述"{{?}}>{{?it.descriptions != "输入对图片的相关描述"||""}}{{!it.descriptions}}{{?}}</textarea>
+                </div>
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入100个字</em>
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control f-setting-option">
+                <label>选择图片</label>
+                <div class="f-grid">
+                    <input type="text" class="f-input" placeholder="请选择小于5M的文件进行上传" data-name="name" readonly="readonly">
+                </div>
+                {{?it.img}}
+                <a href="javascript:void(0);" class="f-edit-button f-edit-pic-button f-edit-delpic-button" data-action="del-picture">
+                    <i class="iconfont">&#xe60e;</i>
+                </a>
+                {{??}}
+                <a href="javascript:void(0);" class="f-edit-button f-edit-pic-button" >
+                    <i class="iconfont">&#xe60f;</i>
+                    <input type="file" data-action="add-picture"/>
+                </a>
+                {{?}}
+            </div>
+        </div>
+        <div class="f-control-group">
+            <div class="f-control">
+                <label>图片链接</label>
+                <div class="f-grid">
+                    <input type="text" class="f-input" data-name="url" {{?it.url == "http://www.kuaizhan.com/"}}placeholder="{{!it.url}}"{{??it.url == ""}}placeholder="http://www.kuaizhan.com/"it.url = "http://www.kuaizhan.com/"{{??}}value="{{!it.url}}{{?}}">
+                </div>
+            </div>
+        </div>
+        <em option-name="id_picture" style="display:none"></em>
+    </fieldset>

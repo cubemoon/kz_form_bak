@@ -1,0 +1,252 @@
+@import "util/config";
+@import "util/mixin";
+@import "util/iconfont";
+body{
+	margin: 0;
+	padding:0;
+}
+html, body{
+	overflow-x:hidden;
+	height:100%;
+}
+.f-form-page{
+	font-size:14px;
+	color: $textGrey;
+	*{
+		margin:0;
+		padding:0;
+		border:0;
+	}
+	.clearfix {
+	  *zoom: 1;
+	}
+	.clearfix:before,
+	.clearfix:after {
+	  display: table;
+	  content: "";
+	  line-height: 0;
+	}
+	.clearfix:after {
+	  clear: both;
+	}
+	.f-btn{
+		display: inline-block;
+		border:$inputBorder 1px solid;
+		border-radius: 3px;
+		padding:5px 30px;
+		color: $textGrey;
+		text-decoration: none;
+		font-size:14px;
+	}
+	.f-btn i, .f-btn span, .f-btn em{
+		vertical-align: middle;
+	}
+	.f-btn i{
+		font-size: 16px;
+		margin-right: 5px;
+	}
+	.f-btn:hover{
+		background:#fff;
+		color: $textBlue;
+	}
+	ul{
+		list-style: none;
+	}
+	em{
+		font-style: normal;
+	}
+	h1{
+		font-size: 16px;
+		line-height: 28px;
+		text-align: center;
+	}
+	h2{
+		font-size: 14px;
+	}
+	h2 span{
+		color: #a8d7f3;
+	}
+	.f-form-title{
+		background:$bgBlue;
+		color:#fff;
+		padding:5px 20px 5px 20px;
+	}
+	.f-subtitle{
+		text-align: center;
+	}
+	.f-select{
+		border: #a8acad 1px solid;
+		border-radius: 4px;
+		position: relative;
+		z-index: 9;
+		background:#fefefe;
+		@include linear-gradient(top,#fefefe,#f3f3f3);
+		height: 28px;
+		padding: 0 5px;
+		font-size: 14px;
+		color: #666;
+		cursor: pointer;
+	}
+	.f-select em{
+		float: left;
+		margin:7px 0 0 0;
+		width: 91%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.f-select i{
+		float:right;
+		font-size: 18px;
+		width: 18px;
+		margin:3px 0 0 0;
+	}
+	.f-select .f-option-list{
+		display: none;
+		position:absolute;
+		top:31px;
+		left: 0px;
+		width: 100%;
+		border:#1a8fda 1px solid;
+		border-radius: 4px;
+		background: #fff;
+		overflow: hidden;
+	}
+	.f-option-list li{
+		padding:6px 8px;
+		cursor: pointer;
+	}
+	.f-option-list li:hover{
+		background:#e8f4fb;
+	}
+
+	.f-form-view .f-title{
+		text-align: center;
+		padding:10px 15px;
+		background:$moldBg;
+	}
+	.f-form-view .f-title h1{
+		font-size: 16px;
+		font-weight: bold;
+		padding:5px 0;
+	}
+	.f-form-item{
+		border-bottom: #e3e3e3 1px dashed;
+		padding:15px 15px;
+		position: relative;
+
+	}
+	.f-form-item h2{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.f-form-item .f-item-wrap{
+		padding: 10px 0 5px 0;
+	}
+	.f-form-item .f-item-wrap .f-option-list{
+		border:$borderBlue 1px solid;
+		border-radius: 4px;
+		background: #fff;
+		overflow: hidden;
+	}
+	.f-form-item .f-control{
+		margin: 10px 0 0 0;
+	}
+	.f-form-item .f-control label{
+		@include display-flex;
+		@include align-items(flex-start);
+		white-space:nowrap;
+	}
+	.f-form-item .f-control label span{
+		@include inline-block;
+		@include flex(1);
+		line-height: 23px;
+		white-space:normal
+	}
+	.f-form-item .f-control .f-hasImg span{
+		max-width: 55%;
+		word-break: break-all;
+		white-space:normal;
+		vertical-align: top;
+	}
+	.f-form-item .f-chengge-checked{
+		@include inline-block;
+		vertical-align: top;
+		width: 25px;
+		height: 23px;
+		line-height: 23px;
+		overflow: hidden;
+		display:none\0;
+		*display:none;
+	}
+	.f-form-item .f-chengge-checked i{
+		font-size: 20px;
+	}
+	.f-form-item .f-control label input{
+		display:none;
+		*display:inline;
+		display:inline\0;
+	}
+	.f-form-item .f-control label input + em .checken-01{
+		display: inline-block;
+	}
+	.f-form-item .f-control label input + em .checken-02{
+		display: none;
+	}
+	.f-form-item .f-control label input:checked + em .checken-01{
+		display: none;
+	}
+	.f-form-item .f-control label input:checked + em .checken-02{
+		display: inline-block;
+		color:$textBlue;
+		font-weight: bold;
+	}
+	.f-form-item .f-control .f-img, .f-form-item .f-control .f-img img{
+		width: 60px;
+		height: 60px;
+	}
+	.f-form-item .f-control .f-img{
+		margin-right: 10px;
+		@include inline-block;
+		vertical-align: top;
+	}
+	.f-form-item .f-control .f-img img{
+		display: block;
+	}
+	.f-form-item .f-control .f-radio, .f-form-item .f-control .f-checkbox{
+		margin: 0 5px 0 0;
+	}
+	.f-form-item .f-control .f-input, .f-form-item .f-control .f-textarea{
+		font-size:14px;
+		box-shadow:none;
+		border:$inputBorder 1px solid;
+		border-radius: 3px;
+		width: 100%;
+		box-sizing:border-box;
+	}
+	.f-form-item .f-control .f-input{
+		height: 25px;
+		padding:2px 5px;
+	}
+	.f-form-item .f-control .f-textarea{
+		height: 90px;
+		padding:2px 5px;
+	}
+	.f-line{
+		border:none;
+		border-top: $textGrey 1px dashed;
+		height: 0px;
+		background: #fff;
+	}
+	.f-btn-wrap{
+		padding:15px;
+	}
+	.f-btn-wrap a{
+		display: block;
+		text-align: center;
+		padding:10px 0;
+		background: $bgBlue;
+		color: #fff;
+		text-decoration: none;
+	}
+}

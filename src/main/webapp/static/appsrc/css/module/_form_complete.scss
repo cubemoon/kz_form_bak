@@ -1,0 +1,60 @@
+.f-p-wrap{
+	.f-complete-wrap{
+		padding:25px 0 0  25px;
+		width: 830px;
+	}
+	.f-complete-wrap .f-btn-wrap{
+		margin:20px 0 0 0;
+	}
+	.f-section-control{
+		margin:25px 0 0 0;
+	}
+	.f-section-control .f-s-title{
+		font-size: 14px;
+		padding: 0 0 5px 0;
+	}
+	.f-section-control .f-figure{
+		@include display-flex;
+		background:#fff;
+		padding:20px;
+		border-radius:2px;
+		@include align-items(stretch);
+	}
+	.f-section-control .f-img-ctrl{
+		border:#ededed 1px solid;
+	}
+	.f-section-control .f-img-ctrl, .f-section-control .f-img-ctrl img{
+		width:100px;
+		height: 100px;
+		display: block;
+		margin-right: 10px;
+	}
+	.f-section-control  .f-control-tips{
+		padding:5px 0 0 0;
+	}
+	.f-section-control .f-caption{
+		@include display-flex;
+		//flex-direction: column;
+		@include flex-direction(column);
+	}
+	.f-section-control .f-caption .f-c-con{
+		@include flex(1);
+	}
+	.f-section-control .f-caption .f-list{
+		@include display-flex;
+		@include align-items(center);
+		position: relative;
+	}
+	.f-section-control .f-caption .f-list-item{
+		margin-right: 20px;
+	}
+	.f-complete-wrap .f-btn{
+		padding: 13px 80px;
+	}
+	.f-complate-input{
+		width:320px;
+	}
+	.f-form-icon{
+		background:url($img_path + 'form_icon.jpg') no-repeat;
+	}
+}

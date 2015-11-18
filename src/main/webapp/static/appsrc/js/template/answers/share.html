@@ -1,0 +1,40 @@
+<article class="f-modal f-share-dlg">
+	<div class="f-modal-body f-share-body">
+		<div class="f-share-left">
+			<div class="f-share-left-top">
+				<div class="f-share-left-flex">
+					<h2>分享到微信</h2>
+					<p class="f-share-left-title">
+						{{!it.title}}
+					</p>
+					<p class="f-share-left-link">
+						<a href="http://form.kuaizhan.com/forms/{{=it.surveyId}}">http://form.kuaizhan.com/forms/{{=it.surveyId}}</a>
+						<a href="javascript:void(0);" id="share_dlg_clip">复制链接</a>
+					</p>
+					<p class="f-share-left-tips">Tips:点击此链接即可直接填写表单并提交哦！</p>
+				</div>
+				<div class="f-share-left-qc">
+					<img src="http://form.kuaizhan.com/forms/{{=it.surveyId}}/qrcode" />
+				</div>
+			</div>
+			<div class="f-share-left-text">
+				<div class="f-share-left-text-title">
+					用微信“扫一扫”二维码即可将表单分享给您的好朋友或朋友圈
+				</div>
+				<div class="f-share-left-img"></div>
+			</div>
+		</div>
+		<div class="f-share-right">
+			<h2>分享到其他平台</h2>
+			<ul>
+				<li><a href="javascript:void(0);" class="f-outside-wb iconfont">&#xe607;</a></li>
+				<li><a href="javascript:void(0);" class="f-outside-qz iconfont">&#xe60c;</a></li>
+				<li><a href="javascript:void(0);" class="f-outside-rr iconfont">&#xe60b;</a></li>
+				<li><a href="javascript:void(0);" class="f-outside-qwb iconfont">&#xe60d;</a></li>
+				<li><a href="javascript:void(0);" class="f-outside-db iconfont">&#xe609;</a></li>
+			</ul>
+		</div>
+	</div>
+	<a href="javascript:void(0);" data-action="close-modal" class="f-close-modal"><i class="iconfont">&#xe605;</i></a>
+</article>
+<div class="f-modal-mask" data-action="remove-modal"></div>

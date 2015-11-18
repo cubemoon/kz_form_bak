@@ -1,0 +1,169 @@
+<div class="f-edit-clip">
+<div class="f-clip-wrap">
+
+<div class="f-mold f-header-opt">
+    <nav class="f-b-nav">
+        <ul class="clearfix">
+            <li class="curr">
+                <i class="iconfont">&#xe600;</i>
+                <em>头部设置</em>
+            </li>
+            <li>
+                <i class="iconfont">&#xe606;</i>
+                <em>内容编辑</em>
+            </li>
+            <li>
+                <i class="iconfont">&#xe603;</i>
+                <em>管理设置</em>
+            </li>
+        </ul>
+    </nav>
+    <fieldset class="f-fieldset f-header">
+        <div class="f-control-group" id="form_title_ipt">
+            <div class="f-control" >
+                <label>表单标题</label>
+                <input class="f-input" type="text" data-type="form-title" {{?it.title == '请输入表单标题'}}placeholder="{{=it.title}}"{{??}}value="{{=it.title}}{{?}}" >
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入15个字</em>
+            </div>
+        </div>
+        <div class="f-control-group" id="form_subtitle_ipt">
+            <div class="f-control">
+                <label>表单副标题</label>
+                <textarea class="f-textarea" data-type="form-title" {{?it.subtitle == '请输入表单副标题'}}placeholder="{{=it.subtitle}}"{{?}}>{{?it.subtitle != '请输入表单副标题'}}{{=it.subtitle}}{{?}}</textarea>
+            </div>
+            <div class="f-control-tips">
+                <label>提示</label>
+                <em>已经输入<span>0</span>个字，最多可输入100个字</em>
+            </div>
+        </div>
+    </fieldset>
+    <div class="f-btn-wrap f-form-edit-btn">
+        <a class="f-btn f-btn-blue" href="#" data-action="next">下一步</a>
+    </div>
+</div>
+
+
+<div class="f-mold f-body-opt">
+    <nav class="f-b-nav">
+        <ul class="clearfix">
+            <li >
+                <i class="iconfont">&#xe600;</i>
+                <em>头部设置</em>
+            </li>
+            <li class="curr">
+                <i class="iconfont">&#xe606;</i>
+                <em>内容编辑</em>
+            </li>
+            <li>
+                <i class="iconfont">&#xe603;</i>
+                <em>管理设置</em>
+            </li>
+        </ul>
+    </nav>
+    <div class="f-body-wrap">
+        <div class="f-mold f-form-view-bg f-scroll">
+                <article class="f-form-view">
+                        <section class="f-title">
+                            <h1>{{!it.title}}</h1>
+                            <p>{{!it.subtitle}}</p>   
+                        </section>
+                        <div class="f-form-item-list">
+                             <section class="f-add-section">
+                                 <div class="f-add-text">
+                                     <i class="iconfont">&#xe604;</i>
+                                     <em>添加表单项</em>
+                                 </div>
+                                 <div class="f-add-button">
+                                     <a href="javascript:void(0);" data-action="add-input">文本输入</a>
+                                     <a href="javascript:void(0);" data-action="add-checkbox">选择项</a>
+                                     <a href="javascript:void(0);" data-action="add-select">下拉菜单</a>
+                                     <a href="javascript:void(0);" data-action="add-line">分割线</a>
+                                     <a href="javascript:void(0);" data-action="add-image">上传图片</a>
+                                     <a href="javascript:void(0);" data-action="add-picture">插入图片</a>
+                                 </div>
+                             </section>
+                        </div>
+                </article>
+        </div>
+        <div class="f-form-setting">
+        </div>
+    </div>
+    <div class="f-btn-wrap f-form-edit-btn">
+        <a class="f-btn f-btn-gery" href="#"  data-action="pre">上一步</a>
+        <a class="f-btn f-btn-gery" href="#"  data-action="creat">存草稿</a>
+        <a class="f-btn f-btn-blue" href="#"  data-action="next">下一步</a>
+    </div>
+</div>
+
+
+
+<div class="f-mold f-option-opt">
+    <nav class="f-b-nav">
+        <ul class="clearfix">
+            <li >
+                <i class="iconfont">&#xe600;</i>
+                <em>头部设置</em>
+            </li>
+            <li>
+                <i class="iconfont">&#xe606;</i>
+                <em>内容编辑</em>
+            </li>
+            <li class="curr">
+                <i class="iconfont">&#xe603;</i>
+                <em>管理设置</em>
+            </li>
+        </ul>
+    </nav>
+    <div class="f-option-wrap">
+        <fieldset class="f-fieldset">
+            <div class="f-control-group">
+                <div class="f-control">
+                    <label>提交后链接到</label>
+                    <div class="f-grid" id="f_select_opt">
+                        <div class="f-select">
+                            <em data-type="select-page">选择页面</em>
+                            <i class="iconfont">&#xe601;</i>
+                            <ul class="f-option-list">
+                                <li class="f-option" data-action="option" data-type="select-page">选择页面</li>
+                                <li class="f-option" data-action="option" data-type="select-doc">选择文章</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f-grid" id="f_selectpage" style="display: block">
+                        <div class="f-select">
+                            <em page-id="{{=it.KZpages[0].id}}">{{!it.KZpages[0].title}}</em>
+                            <i class="iconfont">&#xe601;</i>
+                            <ul class="f-option-list">
+                                <li class="f-option" data-action="option" page-id="none">选择页面</li>
+                                {{~it.KZpages:page}}
+                                <li class="f-option" data-action="option" page-id="{{=page.id}}">{{!page.title}}</li>
+                                {{~}}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f-grid" id="f_selectdoc" style="display: none">
+                        <div class="f-search-doc">
+                            <input type="text" class="f-input" data-action="show-doc-list" />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="f-control-tips">
+                    <label>提示</label>
+                    <em>发布时需要选择提交完毕链接到的页面或者文章</em>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="f-btn-wrap f-form-edit-btn">
+        <a class="f-btn f-btn-gery" href="#" data-action="pre">上一步</a>
+        <a class="f-btn f-btn-gery" href="#" data-action="creat">存草稿</a>
+        <a class="f-btn f-btn-gery" href="#" data-action="publish">发布</a>
+    </div>
+</div>
+
+</div>
+</div>

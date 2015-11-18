@@ -1,0 +1,200 @@
+.f-p-wrap{
+	//layout
+	.f-edit-clip{
+		width: 920px;
+		overflow: hidden;
+	}
+	.f-edit-clip .f-clip-wrap{
+		width:2800px;
+		@include display-flex;
+		@include align-items(flex-start);
+	}
+	.f-header-opt, .f-body-opt, .f-option-opt{
+		width:898px;
+		margin:20px 0 10px 20px;
+	}
+	.f-header-opt{
+		
+	}
+	//BreadcrumbNavigation
+	.f-b-nav{
+		font-size: 16px;
+	}
+	.f-b-nav ul{
+		height: 58px;
+		border-top:#fff 1px solid;
+		border-radius:5px 5px 0 0;
+		border-bottom:$moldBorder 1px solid;
+		@include display-flex;
+	}
+	.f-b-nav li{
+		line-height: 58px;
+		position:relative;
+		margin:0 20px 0 30px;
+	}
+	.f-b-nav li i{
+		font-size: 24px;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+	}
+	.f-b-nav li em{
+		vertical-align: middle;
+	}
+	.f-b-nav li:after, .f-b-nav li:before{
+		content: "";
+		position: absolute;
+		border-top:rgba(0,0,0,0) 29px solid;
+		border-bottom:rgba(0,0,0,0) 29px solid;
+		border-left:rgba(0,0,0,0) 29px solid;
+		top:0;
+	}
+	.f-b-nav li:before{
+		border-left:$moldBg 29px solid;
+		z-index: 2;
+		right: -38px;
+	}
+	.f-b-nav li:after{
+		border-left:$moldBorder 29px solid;
+		z-index: 1;
+		right: -39px;
+	}
+	.f-b-nav li.curr i, .f-b-nav li.curr em{
+		color: $textBlue;
+	}
+	.f-header{
+		padding: 40px 25px;
+	}
+	.f-header .f-input, .f-header .f-textarea{
+		width:423px;
+	}
+	.f-body-opt{
+		
+	}
+	.f-body-wrap{
+		@include display-flex;
+		padding:20px 0 20px 0;
+		//align-items:flex-start;
+		@include align-items(flex-start);
+	}
+	.f-form-view-bg{
+		background:#f0efef;
+		margin:0 15px 0 20px;
+		width:372px;
+		padding:10px;
+		position:relative;
+		overflow: auto;
+	}
+	.f-form-view-bg .f-form-view-mask{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		background:none;
+		z-index: 100;
+	}
+	.f-form-setting{
+		width:460px;
+	}
+	.f-form-setting .f-fieldset{
+		background: #fff;
+		padding: 15px 20px 0px 20px;
+		box-sizing: border-box;
+	}
+	.f-form-setting .f-setting-option{
+		margin:0 0 15px 0;
+	}
+	.f-form-setting .f-select-placeholder{
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+	}
+	.f-form-view-bg .f-add-section{
+		height: 60px;
+		background:#e6f3fb;
+		color: $textBlue;
+		line-height: 60px;
+		font-size: 14px;
+	}
+	.f-add-section .f-add-text{
+		text-align: center;
+		@include flex(1);
+		@include display-flex;
+		@include align-items(center);
+		//justify-content:center;
+		@include justify-content(center)
+	}
+	.f-add-section:hover .f-add-text{
+		display: none;
+	}
+	.f-add-section .f-add-text i{
+		font-size: 14px;
+		margin-right: 5px;
+	}
+	.f-add-section .f-add-button{
+		display: none;
+	}
+	.f-add-section:hover .f-add-button{
+		@include display-flex;
+		@include align-items(center);
+	}
+	.f-add-section .f-add-button a{
+		@include flex(1);
+		border-top: #d1e9f8 1px solid;
+		border-right: #d1e9f8 1px solid;
+		border-bottom: #d1e9f8 1px solid;
+		text-align:center;
+		color: $textBlue;
+		text-decoration: none;
+	}
+	.f-add-section .f-add-button a:hover{
+		opacity: 0.5;
+	}
+	.f-add-section .f-add-button a:last-child{
+		border-right:none;
+	}
+	.f-option-opt{
+		
+	}
+	.f-option-opt .f-option-wrap{
+		padding:30px 0 40px 30px;
+	}
+	.f-option-wrap .f-fieldset{
+		width: 500px;
+	}
+	.f-option-wrap .f-fieldset .f-control label{
+		width:105px;
+	}
+	.f-option-wrap .f-fieldset .f-control-tips{
+		padding:0 0 0 105px;
+	}
+	.f-search-doc{
+		position:relative;
+	}
+	.f-option-wrap #f_selectpage .f-select em{
+		width:187px;
+	}
+	.f-search-doc .f-search-list{
+		position:absolute;
+		top:31px;
+		left: 0px;
+		width: 100%;
+		box-sizing: border-box;
+		border:$borderBlue 1px solid;
+		border-radius: 4px;
+		background: #fff;
+		overflow: hidden;
+	}
+	.f-search-doc .f-search-list li{
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		padding: 0 8px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.f-search-doc .f-search-list li:hover{
+		background:#e8f4fb;
+	}
+}

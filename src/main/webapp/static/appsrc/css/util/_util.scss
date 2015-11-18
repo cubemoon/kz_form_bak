@@ -1,0 +1,49 @@
+.f-p-wrap{
+	.f-select{
+		border: $inputBorder 1px solid;
+		border-radius: 4px;
+		position: relative;
+		@include linear-gradient(top,#fefefe,#f3f3f3);
+		height: 28px;
+		padding: 0 5px;
+		font-size: 14px;
+		color: $textGrey;
+		@include display-flex;
+		@include align-items(center);
+	}
+	.f-select em{
+		@include flex(1);
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.f-select i{
+		font-size: 18px;
+		width: 18px;
+	}
+	.f-select .f-option-list{
+		display: none;
+		position:absolute;
+		top:31px;
+		left: 0px;
+		width: 100%;
+		box-sizing: border-box;
+		border:$borderBlue 1px solid;
+		border-radius: 4px;
+		background: #fff;
+		max-height: 350px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.f-option-list li{
+		padding:6px 8px;
+		cursor: pointer;
+	}
+	.f-option-list li:hover{
+		background:#e8f4fb;
+	}
+	.f-option-list li.curr{
+		background:#e8f4fb;
+	}
+	
+}

@@ -1,0 +1,18 @@
+<section class="f-form-item"  data-name="id_dropdown"  current="true">
+    <h2><em>{{!it.title}}</em>{{?it.required ==1}}<span>*</span>{{??}}{{?}}</h2>
+    <div class="f-item-wrap">
+        <div class="f-control">
+            <div class="f-select">
+                <em>请选择</em>
+                <i class="iconfont">&#xe601;</i>
+            </div>
+            <ul class="f-option-list" style="display: block" data-type="select">
+                    {{~it.value:list}}
+                    <li class="option">{{!list.name}}</li>
+                    {{~}}
+            </ul>
+        </div>
+    </div>
+    <div class="f-item-mask" data-action="edit-select"></div>
+    <i class="iconfont f-item-del" >&#xe605;</i>
+</section>

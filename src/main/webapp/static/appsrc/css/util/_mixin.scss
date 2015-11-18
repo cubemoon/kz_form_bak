@@ -1,0 +1,37 @@
+@mixin linear-gradient($direction...){
+	background:-webkit-linear-gradient($direction...);
+	background:linear-gradient($direction...);
+}
+@mixin display-flex(){
+	display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;    /* 老版本语法: Firefox (buggy) */ 
+    display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+	display: -webkit-flex;
+   	display: flex;
+}
+@mixin flex($num){
+	-webkit-flex:$num;
+	flex:$num;
+}
+@mixin align-items($val){
+	-webkit-align-items: $val;
+   align-items: $val;
+}
+@mixin align-self($val){
+	-webkit-align-self: $val;
+   align-self: $val;
+}
+@mixin flex-direction($val){
+	-webkit-flex-direction: $val;
+   flex-direction: $val;
+}
+@mixin justify-content($val){
+	-webkit-justify-content: $val;
+   justify-content: $val;
+}
+@mixin inline-block(){
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+}

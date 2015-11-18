@@ -1,0 +1,17 @@
+<section class="f-form-item"  data-name="id_image" current="true">
+    <h2><em>{{!it.title}}</em>{{?it.required ==1}}<span>*</span>{{??}}{{?}}</h2>
+    <div class="f-item-wrap">
+        <div class="f-description"><span>{{!it.description}}</span></div>
+        <div class="f-control">
+            <span class="f-span">选择图片</span>
+            <input type="file" class="file-image" data-name="fileImage" data-action="add-image" size="28" />
+            <div class="image-style">
+                <a href="javascript:void(0);">
+                    <img class="f-img" src="http://kzcdn.itc.cn/res/skin/images/img/pic-one.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="f-item-mask" data-action="edit-image"></div>
+    <i class="iconfont f-item-del" >&#xe605;</i>
+</section>
