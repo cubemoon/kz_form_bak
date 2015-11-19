@@ -1,0 +1,1 @@
+scp -r ./src/main/webapp root@10.10.79.134:/opt/webapps/kuaizhan-form

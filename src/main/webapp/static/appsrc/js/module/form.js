@@ -270,6 +270,13 @@ define([
 							stutas = false;
 							return false;
 						}
+					}else if(name == 'id_image'){
+						if($(item).find('img').attr('src') == 'http://kzcdn.itc.cn/res/skin/images/img/pic-one.png') {
+							$(item).find('input').focus();
+							alert("请选择合适的照片上传！");
+							stutas = false;
+							return false;
+						}
 					}
 				} else {
 					var val = $(item).find('input').val();
@@ -307,10 +314,10 @@ define([
 		function uploadPicture(ipt) {
 			var formdata = new FormData();
 			formdata.append('image', ipt.files[0]);
-			ajax.uploadPic(siteId, formdata, function(ret) {
+			ajax.uploadPicture(siteId, formdata, function(ret) {
 				var thisImg = {};
 				thisImg.img = ret.data;
-				$formList.find('.f-image').attr('src',thisImg.img);
+				$formList.find('.image-style').find('.f-image').attr('src',thisImg.img);
 			}, function() {
 				alert('文件超过5M或者格式有误，请重新选择图片！');
 			}, {

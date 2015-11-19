@@ -7,8 +7,5 @@ target
 *~
 nohup.out
 /target
-deploy_dev.sh
-deploy_product.sh
-deploy_res.sh
-package.sh
-
+/.idea
+kuaizhan-form.iml

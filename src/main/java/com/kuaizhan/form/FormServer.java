@@ -41,6 +41,8 @@ public class FormServer extends AbstractServer{
 		Spark.post("/forms/:id/visits", formsHandler.visit, jsonTransformer);
 		Spark.get("/forms/:id/qrcode", new QRCodeHandler());
 		Spark.post("/forms/:survey_id/answers", formsHandler.postAnswer, jsonTransformer);
+		Spark.post("/forms/images", new ImageUploadHandler(), jsonTransformer);
+
 
 		SurveysHandler surveyHandler = new SurveysHandler();
 		//survey restful
